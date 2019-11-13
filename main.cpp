@@ -1,7 +1,7 @@
 #include <iostream>
 #include <cstring>
 #include "Player.h"
-#include "MobClass.h"
+#include "Mob.h"
 
 int main()
 {//Main Class
