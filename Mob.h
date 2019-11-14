@@ -11,7 +11,9 @@ public:
   void setDamage();
   void setHP(double);
   void setMaxHP();
-  
+  void setDifficulty(int);
+  char* getName();
+  int getLevel();
 private:
   char mobName[80];
   
