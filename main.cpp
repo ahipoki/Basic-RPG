@@ -11,6 +11,8 @@ int ATK = 10;
 int Gold = 0;
 
 void strupper(char* str);
+void inventory();
+void help();
 void shop();
 
 int main()
@@ -19,6 +21,7 @@ int main()
     cout<<"What is your name?"<<endl;
     cin.getline(name, sizeof(name));
     cout<<"Welcome "<<name<<"!"<<endl;
+    cout<<"Your commands are: INVENTORY, HELP"<<endl;
     while (running == true){
         char input[80];
         cout<<"Do you want to go to the shop?"<<endl;
@@ -29,6 +32,12 @@ int main()
         }
         else if (strcmp(input, "NO") == 0){
             running = false;
+        }
+        else if (strcmp(input, "INVENTORY") == 0){
+            inventory();
+        }
+        else if (strcmp(input, "HELP") == 0){
+            help();
         }
         else{
             cout<<"That's an invalid option"<<endl;
@@ -41,6 +50,16 @@ void strupper(char* str){
     for (int i = 0; i < len; i++){
         str[i] = toupper(str[i]);
     }
+}
+
+void inventory(){
+    cout<<"Inventory:"<<endl;
+}
+
+void help(){
+    cout<<"Your commands are:"<<endl;
+    cout<<"INVENTORY: Check what you have in your inventory"<<endl;
+    cout<<"HELP: Print out what commands you have"<<endl;
 }
 
 void shop(){
@@ -68,6 +87,12 @@ void shop(){
         }
         else if (strcmp(choice, "BACK") == 0){
             browsing = false;
+        }
+        else if (strcmp(choice, "INVENTORY") == 0){
+            inventory();
+        }
+        else if (strcmp(choice, "HELP") == 0){
+            help();
         }
         else{
             cout<<"That's an invalid option"<<endl;
